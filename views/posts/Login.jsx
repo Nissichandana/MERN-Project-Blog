@@ -1,9 +1,8 @@
-
 const React =require('react');
 
 // Define your styled components with media queries
 
-export default function Comments() {
+export default function Login() {
 const styles = {
 HeroNav: {
 height: '500px',
@@ -62,80 +61,101 @@ borderRadius: '5px',
 cursor: 'pointer',
 },
 subContainerDiv: {
-    display: 'grid',
-    backgroundColor: '#390c0c',
-    color: 'white',
-    gridTemplateColumns: '1fr 1fr 1fr',
-    gridTemplateRows: 'auto',
-    gap: '5px',
-    margin: '10px 0',
-    },
-    subContainerCard: {
-    maxWidth: '100%',
-    height: 'auto',
+display: 'grid',
+backgroundColor: '#390c0c',
+color: 'white',
+gridTemplateColumns: '1fr 1fr 1fr',
+gridTemplateRows: 'auto',
+gap: '5px',
+margin: '10px 0',
+},
+subContainerCard: {
+maxWidth: '100%',
+height: 'auto',
+display: 'flex',
+flexDirection: 'column',
+alignItems: 'center',
+},
+subContainerImage: {
+maxWidth: 'auto',
+height: '100px',
+paddingTop: '20px',
+borderRadius: '50px',
+marginBottom: '20px',
+},
+subContainerParagraph: {
+textAlign: 'center',
+margin: '0',
+padding: '10px',
+fontFamily: 'OldStandardTT, sans-serif',
+fontFize: 'small',
+},
+subContainerButton: {
+backgroundColor: '#3498db',
+color: '#fff',
+padding: '10px 10px',
+border: 'none',
+borderRadius: '5px',
+cursor: 'pointer',
+},
+subconched: {
+color: '#fff',
+textAlign: 'center',
+backgroundColor: '#390c0c',
+padding: '20px',
+},
+Footer: {
+backgroundColor: '#390c0c',
+color: '#fff',
+padding: '20px',
+},
+FooterA: {
+color: 'red',
+textDecoration: 'none',
+':hover': {
+color: '#fff',
+textDecoration: 'underline',
+},
+},
+
+form:{
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    backgroundColor: 'coral',
+    padding:'40px',
+    border:'2px white solid',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
+
+}
+};
+const mediaQuerystylesMobile = {
+    '@media only screen and (max-width: 768px)': {
+    HeroNav: {
+    height: '200px',
     },
-    subContainerImage: {
-    maxWidth: 'auto',
-    height: '100px',
-    paddingTop: '20px',
-    borderRadius: '50px',
-    marginBottom: '20px',
-    },
-    subContainerParagraph: {
-    textAlign: 'center',
-    margin: '0',
+    Navul: {
     padding: '10px',
-    fontFamily: 'OldStandardTT, sans-serif',
-    fontFize: 'small',
+    display: 'flex',
     },
-    subContainerButton: {
-    backgroundColor: '#3498db',
-    color: '#fff',
-    padding: '10px 10px',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
+    section: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '10px',
+    alignItems: 'center', // Align items to the center in column layout
     },
-    subconched: {
-    color: '#fff',
-    textAlign: 'center',
-    backgroundColor: '#390c0c',
-    padding: '20px',
-    },
-    Footer: {
-    backgroundColor: '#390c0c',
-    color: '#fff',
-    padding: '20px',
-    },
-    FooterA: {
-    color: 'red',
-    textDecoration: 'none',
-    ':hover': {
-    color: '#fff',
-    textDecoration: 'underline',
+    myButton: {
+    top: '10px', // Adjusted top value
+    right: '0', // Adjusted right value
+    padding: '10px',
+    position: 'static', // Adjusted position to static
     },
     },
-    
-    form:{
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: 'coral',
-        padding:'40px',
-        border:'2px white solid',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
-    
-    }
     };
-
-
     return (
         <div>
-        <header style={{...styles.HeroNav}} className="hero-nav">
+        <header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
         <nav style={styles.HeaderNav}>
-        <ul style={{...styles.Navul}}>
+        <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
         <li><img src="" alt="none" /> dericol flowers</li>
         <li>about us</li>
         <li>what we stand for</li>
@@ -144,26 +164,7 @@ subContainerDiv: {
         </nav>
         </header>
         
-        <div style={{...styles.sectionContainer}}>
-        <section style={{...styles.section}} >
-        <section>
-        <div>
-        <h2>Your comments are important to us!</h2>
-        <div class="form-container">
-        <form style={{...styles.form}} action="">
-        <label for="name">name:</label>
-        <input type="text" placeholder="enter your name"/>
-        <label for="email">email:</label>
-        <input type="email" placeholder="enter your name"/>
-        <textarea name="opinion" id="" cols="100" rows="10"></textarea>
-        <button type="submit">submit</button>
-        </form>
-        </div>
-             </div>
-             </section>
-             </section>
-                  
-             </div>
+        
              <div style={{...styles.Footer}}>
 <h2 style={{...styles.subconched}}>your home grown flowers</h2>
 <div style={{...styles.subContainerDiv}}>
@@ -217,14 +218,35 @@ subContainerDiv: {
 </div>
 
 </div>
-<div >   
-<footer style={{...styles.Footer}}>
+<div > <footer style={{...styles.Footer}}>
 <p style={{...styles.FooterCopyRight}}>&copy; 2024 Your Company</p>
-<a style={{...styles.FooterA}} href="#" class="icon">Icon 1</a>
-<a style={{...styles.Footer}}href="#" class="icon">Icon 2</a> </footer> </div>
+<a style={{...styles.FooterA}} href="#" className="icon">Icon 1</a>
+<a style={{...styles.Footer}}href="#" className="icon">Icon 2</a> </footer> </div>
 </div>
 );
 
-}        
+}    
 
-
+<div style={{...styles.sectionContainer}}>
+<section style={{...styles.section,...mediaQuerystylesMobile.section}} >
+<div style={{...styles.sectionContainer}}>
+<section style={{...styles.section,...mediaQuerystylesMobile.section}} >
+<section>
+    <div>
+        <h2 style={{...styles.subconched,fontFamily:'Geogoria',fontSize:'50px'}}>Login</h2>
+     <div class="form-container">
+        <form style={{...styles.form}} action="">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="enter your email" required/>
+            <label for="password">Password:</label>
+            <input type="password" placeholder="enter your password" required/>
+            <button type="submit">submit</button>
+        </form>
+     </div>
+     
+     </div>
+     </section>
+     </section>
+     </div>
+          </section>
+     </div>
