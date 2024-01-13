@@ -136,10 +136,10 @@ subContainerDiv: {
         <header style={{...styles.HeroNav}} className="hero-nav">
         <nav style={styles.HeaderNav}>
         <ul style={{...styles.Navul}}>
-        <li><img src="" alt="none" /> dericol flowers</li>
-        <li>about us</li>
-        <li>what we stand for</li>
-        <li>Drop a comment</li>
+        <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li>
+                    <li><a href='/about'>About Us</a></li>
+                    <li><a href='/signup'>Sign Up</a></li>
+                    <li><a style = {{color:'black'}} href='/comment'>Drop a comment</a></li>
         </ul>
         </nav>
         </header>

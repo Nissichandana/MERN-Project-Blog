@@ -7,7 +7,7 @@ const styles = {
 HeroNav: {
 height: '500px',
 width: 'auto',
-backgroundImage: 'url("https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D")',
+backgroundImage: 'url("https://images.pexels.com/photos/46231/water-lilies-pink-water-lake-46231.jpeg?auto=compress&cs=tinysrgb&w=600")',
 backgroundSize: 'cover',
 backgroundRepeat: 'no-repeat',
 },
@@ -168,10 +168,10 @@ imageAndButtonContainer: {
                     <header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
                     <nav style={styles.HeaderNav}>
                     <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
-                    <li><img src="" alt="none" /> dericol flowers</li>
-                    <li>about us</li>
-                    <li>what we stand for</li>
-                    <li>Drop a comment</li>
+                    <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li>
+                    <li><a href='/about'>About Us</a></li>
+                    <li><a href='/signup'>Sign Up</a></li>
+                    <li><a href='/comment'>Drop a comment</a></li>
                     </ul>
                     </nav>
                     </header>
@@ -211,7 +211,7 @@ quo quia? Consectetur, obcaecati!
 </div>
 <div style={{...styles.imageAndButtonContainer,...mediaQuerystylesMobile.imageAndButtonContainer}}>
     <div style={{ ...styles.myImage,...mediaQuerystylesMobile.Image}}>
-        <img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="2"/>
+        <img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://images.pexels.com/photos/1179863/pexels-photo-1179863.jpeg?auto=compress&cs=tinysrgb&w=600" alt="2"/>
         
          <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> view post</button>
      </div>
@@ -253,7 +253,7 @@ quo quia? Consectetur, obcaecati!
 </div>
 <div style={{...styles.imageAndButtonContainer,...mediaQuerystylesMobile.imageAndButtonContainer}}>
     <div style={{ ...styles.myImage,...mediaQuerystylesMobile.Image}}>
-        <img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="2"/>
+        <img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&w=600" alt="2"/>
         
          <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> view post</button>
      </div>
@@ -295,7 +295,7 @@ quo quia? Consectetur, obcaecati!
 </div> 
 <div style={{...styles.imageAndButtonContainer,...mediaQuerystylesMobile.imageAndButtonContainer}}>
 <div style={{ ...styles.myImage,...mediaQuerystylesMobile.Image}}>
-<img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="2"/>
+<img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://media.istockphoto.com/id/628097352/photo/fresh-vegetables.jpg?b=1&s=612x612&w=0&k=20&c=AKU-JuegVpLJuK5KTHkuI41op3bO-Q1cRtw2I3D0wjA=" alt="2"/>
          <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> view post</button>
      </div>
 </div>
@@ -305,17 +305,17 @@ quo quia? Consectetur, obcaecati!
 <h2 style={{...styles.subconched}}>your home grown flowers</h2>
 <div style={{...styles.subContainerDiv}}>
 <div style={{...styles.subContainerCard}}>
-<img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
+<img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/46216/sunflower-flowers-bright-yellow-46216.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
 <p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
 <button style={{...styles.subContainerButton}}> View post </button>
 </div>
 <div style={{...styles.subContainerCard}}>
-<img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
+<img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/87452/flowers-background-butterflies-beautiful-87452.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
 <p style={{...styles.subContainerParagraph}}> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
 <button style={{...styles.subContainerButton}}> View post </button>
 </div>
    <div style={{...styles.subContainerCard}}>
-    <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
+    <img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
     <p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis a
         dipisci. Asperiores, id.
     </p>
@@ -328,17 +328,17 @@ quo quia? Consectetur, obcaecati!
 <h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2>
 <div style={{...styles.subContainerDiv,...styles.Footer}}>
 <div style={{...styles.subContainerCard}}>
-<img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
+<img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
 <p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
 <button style={{...styles.subContainerButton}}> View post </button>
 </div>
 <div style={{...styles.subContainerCard}}>
-<img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
+<img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
 <p style={{...styles.subContainerParagraph}}> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
 <button style={{...styles.subContainerButton}}> View post </button>
 </div>
 <div style={{...styles.subContainerCard}}>
-<img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
+<img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/1556688/pexels-photo-1556688.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
 <p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis a
 dipisci. Asperiores, id.
 </p>
