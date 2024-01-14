@@ -2,7 +2,7 @@ const React =require('react');
 
 // Define your styled components with media queries
 
-export default function SignUp() {
+export default function SignUp({messages, color}) {
 const styles = {
 HeroNav: {
 height: '500px',
@@ -171,14 +171,15 @@ return (
     <section>
     <div>
     <h2 style={{...styles.subconched,fontFamily:'Geogoria',fontSize:'50px'}}>Sign Up Here!</h2>
+    <h3 style={{color:color,textAlign:'center'}}> {messages}</h3>
     <div className="form-container">
-    <form style={{...styles.form}} action="">
+    <form style={{...styles.form}} action="/Nissi/SignUpClient" method='post'>
     <label htmlFor="name">name:</label>
-    <input type="text" placeholder="enter your name" required/>
+    <input type="text" name='name' placeholder="enter your name" required/>
     <label htmlFor="email">email:</label>
-    <input type="email" placeholder="enter your email" required/>
+    <input type="email" name='email' placeholder="enter your email" required/>
     <label htmlFor="password">Password:</label>
-    <input type="password" placeholder="enter your password" required/>
+    <input type="password" name='password' placeholder="enter your password" required/>
     <button type="submit">submit</button>
     </form>
     </div>

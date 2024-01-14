@@ -217,7 +217,7 @@ quo quia? Consectetur, obcaecati!
 </section>
 
 <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched}}>Place NAme</h2>
+<h2 style={{...styles.subconched}}>Place Name</h2>
 <div style={{...styles.subContainerDiv}}>
 <div style={{...styles.subContainerCard}}>
 <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
@@ -227,7 +227,7 @@ quo quia? Consectetur, obcaecati!
 <div style={{...styles.subContainerCard}}>
 <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
 <p style={{...styles.subContainerParagraph}}> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
-<a href="/"> <button style={{...styles.subContainerButton}}>View </button></a>
+<a href="/"> <button style={{...styles.subContainerButton}}>View post</button></a>
 </div>
 <div style={{...styles.subContainerCard}}>
 <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>

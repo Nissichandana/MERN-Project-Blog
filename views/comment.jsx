@@ -149,11 +149,11 @@ subContainerDiv: {
         <section>
         <div>
         <h2>Your comments are important to us!</h2>
-        <div class="form-container">
+        <div className="form-container">
         <form style={{...styles.form}} action="">
-        <label for="name">name:</label>
+        <label htmlFor="name">name:</label>
         <input type="text" placeholder="enter your name"/>
-        <label for="email">email:</label>
+        <label htmlFor="email">email:</label>
         <input type="email" placeholder="enter your name"/>
         <textarea name="opinion" id="" cols="100" rows="10"></textarea>
         <button type="submit">submit</button>

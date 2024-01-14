@@ -220,7 +220,7 @@ quo quia? Consectetur, obcaecati!
 <div style={{...styles.sectionContainer}}>
 <section style={{...styles.section,...mediaQuerystylesMobile.section}} >
 <div style={{...styles.textContent,...styles.sectionContainerintro}}>
-<h2> Have your own flower garden</h2>
+<h2> Places you want to visit</h2>
 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
 tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
 esse ducimus quos possimus qui ullam, voluptatum eligendi
@@ -262,7 +262,7 @@ quo quia? Consectetur, obcaecati!
 <div style={{...styles.sectionContainer}}>
 <section style={{...styles.section,...mediaQuerystylesMobile.section}} >
 <div style={{...styles.textContent,...styles.sectionContainerintro}}>
-<h2> Have your own flower garden</h2>
+<h2> Have you tried these recipies?</h2>
 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
 tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
 esse ducimus quos possimus qui ullam, voluptatum eligendi
