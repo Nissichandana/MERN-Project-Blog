@@ -1,6 +1,6 @@
 const React = require('react')
 
-export default function update({messages}) {
+export default function update({messages, commentInfo}) {
 
 const styles = {
     HeroNav: {
@@ -176,12 +176,12 @@ subContainerDiv: {
 {messages || "Cannot send an empty message"}
 </h3>
          <div className="form-container">
-            <form style={{...styles.form}} action="/update" method=''>
+            <form style={{...styles.form}} action="/Nissi/update/:_id" method='post'>
                 <label htmlFor="name">name:</label>
-                <input type="text" defaultValue={"frank"}/>
+                <input type="text" name='name' defaultValue={commentInfo.name}/>
                 <label htmlFor="email">email:</label>
-                <input type="email" defaultValue={"fokolie8@gamail.com"}/>
-                <textarea name="opinion"  defaultValue={"this is a goog post and i really liked it, do have more"}  id="" cols="100" rows="10"></textarea>
+                <input type="email" name='email' defaultValue={commentInfo.email}/>
+                <textarea name="opinion"  defaultValue={commentInfo.opinion}  id="" cols="100" rows="10"></textarea>
                 <button type="submit"><a style={{textDecoration:'none',}} href=""> Update</a> </button> {/* the id of the user must be present */}
             </form>
          </div>

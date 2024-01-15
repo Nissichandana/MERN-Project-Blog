@@ -150,11 +150,11 @@ subContainerDiv: {
         <div>
         <h2>Your comments are important to us!</h2>
         <div className="form-container">
-        <form style={{...styles.form}} action="">
+        <form style={{...styles.form}} action="/Nissi/PostAComment" method='post'>
         <label htmlFor="name">name:</label>
-        <input type="text" placeholder="enter your name"/>
+        <input type="text" name='name' placeholder="enter your name"/>
         <label htmlFor="email">email:</label>
-        <input type="email" placeholder="enter your name"/>
+        <input type="email" name='email' placeholder="enter your name"/>
         <textarea name="opinion" id="" cols="100" rows="10"></textarea>
         <button type="submit">submit</button>
         </form>

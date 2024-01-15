@@ -2,7 +2,7 @@ const React =require('react');
 
 // Define your styled components with media queries
 
-export default function BlogHomePage() {
+export default function BlogHomePage({messages}) {
 const styles = {
 HeroNav: {
 height: '500px',
@@ -175,6 +175,7 @@ imageAndButtonContainer: {
                     </ul>
                     </nav>
                     </header>
+                    <h1>{messages}</h1>
                     <div style={{...styles.sectionContainer}}>
 <section style={{...styles.section,...mediaQuerystylesMobile.section}} >
 <div style={{...styles.textContent,...styles.sectionContainerintro}}>
@@ -213,7 +214,11 @@ quo quia? Consectetur, obcaecati!
     <div style={{ ...styles.myImage,...mediaQuerystylesMobile.Image}}>
         <img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://images.pexels.com/photos/1179863/pexels-photo-1179863.jpeg?auto=compress&cs=tinysrgb&w=600" alt="2"/>
         
-         <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> view post</button>
+         {/* <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> view post</button> */}
+         {/* <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> <a href={/Nissi}> Home</a></button> */}
+         <button style={{ ...styles.myButton, ...mediaQuerystylesMobile.myButton }}>
+  <a href="/Nissi">Home</a>
+</button>
      </div>
      </div>
 </section>

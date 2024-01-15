@@ -174,11 +174,19 @@ textContent: {
 
 <h2 style={{...styles.subconched,fontFamily:'Geogoria',fontSize:'50px'}}>Login</h2>
 <div className="form-container">
-<form style={{...styles.form}} action="">
+{/* <form style={{...styles.form}} action="/Nissi/loginForm" method='POST'>
 <label htmlFor="email">Email:</label>
-<input type="email" placeholder="enter your email" required/>
+<input type="email" name="email" placeholder="enter your email" required/>
 <label htmlFor="password">Password:</label>
-<input type="password" placeholder="enter your password" required/>
+<input type="password" name="password"placeholder="enter your password" required/>
+<button type="submit">submit</button>
+</form> */}
+
+<form style={{...styles.form}} action={`/Nissi/loginForm`} method='post'>
+<label for="email">Email:</label>
+<input type="email" name="email" placeholder="enter your email" required/>
+<label for="password">Password:</label>
+<input type="password" name="password" placeholder="enter your password" required/>
 <button type="submit">submit</button>
 </form>
 </div>
