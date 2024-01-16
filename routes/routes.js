@@ -29,7 +29,7 @@ routes.get('/Comment', async (req, res) => {
           return email===member.email;
         })
        
-       if (result==[]|| result==0) { return res.render('homePage/sign-up',{messages:messages})}
+       if (result==[]|| result==0) { return res.render('posts/SignUp',{messages:messages})}
     
        const  newComment=new Comments({
         name,
@@ -164,7 +164,7 @@ routes.get('/Contributions',async(req, res) => {
       const myId = req.params.id;
       const myOutput = await Comments.findById(myId);
       if(myOutput==0 || myOutput==[]){ res.render('homePage/sign-up',{messages:"you are not a member of this site, sign in here"})}
-      res.render('update', { commentInfo:myOutput });
+      res.render('places/update', { commentInfo:myOutput });
       
       } catch (error) {
         console.log(error);
@@ -188,5 +188,48 @@ routes.get('/Contributions',async(req, res) => {
         res.status(500).send('Internal Server Error');
       }
       });
+// Delete
 
+routes.get('/delete/:id', async (req, res) => {
+  try {
+  const message="Removed an update";
+  await Comments.findByIdAndDelete(req.params.id);
+  res.render('blogHomePage',{messages:message});
+  } catch (error) {
+  console.log(error);
+  res.status(500).send('Internal Server Error');
+  }
+  });
+
+
+//update a comment on web form..........................................................
+routes.get('/edit/:id', async (req, res) => {
+try {
+const myId = req.params.id;
+const myOutput = await Comments.findById(myId);
+if(myOutput==0 || myOutput==[]){ res.render('posts/SignUp',{messages:"you are not a member of this site, sign in here"})}
+console.log(myOutput);
+res.render('places/anotherUpdate', {myOutput , messages:""});
+
+} catch (error) {
+  console.log(error);
+  res.status(500).send('Internal Server Error');
+}
+});
+
+//update comment to database
+routes.post('/update/:id', async (req, res) => {
+try {
+const { name,email,opinion } = req.body;
+
+  // Convert "on" to true and an empty string to false
+
+   await Comments.findByIdAndUpdate(req.params.id, { name,email,opinion});
+  
+  res.render('blogHomePage',{messages:"Thank you for your contribution!"});
+} catch (error) {
+  console.log(error);
+  res.status(500).send('Internal Server Error');
+}
+});
 module.exports = routes;

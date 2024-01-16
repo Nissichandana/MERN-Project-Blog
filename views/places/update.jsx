@@ -1,6 +1,6 @@
 const React = require('react')
 
-export default function update({messages, commentInfo}) {
+export default function update({myOutput, messages}) {
 
 const styles = {
     HeroNav: {
@@ -160,7 +160,7 @@ subContainerDiv: {
                     <header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
                       <nav style={styles.HeaderNav}>
                         <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
-                          <li><img src="" alt="none" /> dericol flowers</li>
+                          {/* <li><img src="" alt="none" /> dericol flowers</li> */}
                           <li>about us</li>
                           <li>what we stand for</li>
                           <li style={{color:'black'}}>Drop a comment</li>
@@ -175,16 +175,16 @@ subContainerDiv: {
 <h3 style={{ color: messages ? "green" : "red" }}>
 {messages || "Cannot send an empty message"}
 </h3>
-         <div className="form-container">
-            <form style={{...styles.form}} action="/Nissi/update/:_id" method='post'>
-                <label htmlFor="name">name:</label>
-                <input type="text" name='name' defaultValue={commentInfo.name}/>
-                <label htmlFor="email">email:</label>
-                <input type="email" name='email' defaultValue={commentInfo.email}/>
-                <textarea name="opinion"  defaultValue={commentInfo.opinion}  id="" cols="100" rows="10"></textarea>
-                <button type="submit"><a style={{textDecoration:'none',}} href=""> Update</a> </button> {/* the id of the user must be present */}
-            </form>
-         </div>
+<div class="form-container">
+<form style={{...styles.form}} action={`/Nissi/update/${myOutput.myID}`} method='post'>
+<label htmlfor="name">name:</label>
+<input type="text" name="name" defaultValue={myOutput.name}/>
+<label htmlfor="email">email:</label>
+<input type="email" name="email"defaultValue={myOutput.email}/>
+<textarea name="opinion"defaultValue={myOutput.opinion} id="" cols="100" rows="10"></textarea>
+<button type="submit"><a style={{textDecoration:'none',}} href=""> Update</a> </button> {/* the id of the user must be present */}
+</form>
+</div>
          
          </div>
          </section>

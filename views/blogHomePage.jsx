@@ -7,7 +7,7 @@ const styles = {
 HeroNav: {
 height: '500px',
 width: 'auto',
-backgroundImage: 'url("https://images.pexels.com/photos/46231/water-lilies-pink-water-lake-46231.jpeg?auto=compress&cs=tinysrgb&w=600")',
+backgroundImage: 'url("https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600")',
 backgroundSize: 'cover',
 backgroundRepeat: 'no-repeat',
 },
@@ -16,13 +16,16 @@ display: 'flex',
 flexDirection: 'row-reverse',
 },
 Navul: {
-height: '30%',
-width: '100%',
-padding: '50px',
-display: 'flex',
-justifyContent: 'space-around',
-listStyle: 'none',
-},
+    height: '30%',
+    width: '100%',
+    padding: '50px',
+    display: 'flex',
+    justifyContent: 'space-around',
+    listStyle: 'none',
+    fontSize:'large',
+    fontFamily:'Garamond',
+    color:'white',
+    },
 sectionContainer: {
 marginTop: '50px',
 },
@@ -118,14 +121,12 @@ imageAndButtonContainer: {
             backgroundColor: '#390c0c',
             color: '#fff',
             padding: '20px',
+            textAlign: 'center',
             },
             FooterA: {
-                color: 'red',
+                color: 'white',
                 textDecoration: 'none',
-                ':hover': {
-                color: '#fff',
-                textDecoration: 'underline',
-                },
+                
                 },
                 };
                 const mediaQuerystylesMobile = {
@@ -165,21 +166,23 @@ imageAndButtonContainer: {
 
                 return (
                     <div>
-                    <header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
-                    <nav style={styles.HeaderNav}>
-                    <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
-                    <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li>
-                    <li><a href='/about'>About Us</a></li>
-                    <li><a href='/signup'>Sign Up</a></li>
-                    <li><a href='/comment'>Drop a comment</a></li>
-                    </ul>
-                    </nav>
-                    </header>
+                   <header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
+<nav style={styles.HeaderNav}>
+<ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
+{/* <li style={{display:'flex',alignItems:'center', fontSize:'40px'}}><a href= '/Nissi/'style={{textDecoration:'none',color:'white'}}><img style={{height:'50px',width:'30px',border:'2px solid orange',borderRadius:'50px'}}src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO3ThLzvml4Q4N5fSRX335KBwArf7QdhOnkw&usqp=CAU" alt="none" /> dericol flowers </a></li> */}
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/about'>About us</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/Comment'>Comments</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/SignUp'>Sign Up</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/Login'>Log in</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/Login'>Log Out</a></li>
+</ul>
+</nav>
+</header>
                     <h1>{messages}</h1>
                     <div style={{...styles.sectionContainer}}>
 <section style={{...styles.section,...mediaQuerystylesMobile.section}} >
 <div style={{...styles.textContent,...styles.sectionContainerintro}}>
-<h2> Have your own flower garden</h2>
+<h2> Grow your own herb garden</h2>
 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
 tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
 esse ducimus quos possimus qui ullam, voluptatum eligendi
@@ -212,12 +215,12 @@ quo quia? Consectetur, obcaecati!
 </div>
 <div style={{...styles.imageAndButtonContainer,...mediaQuerystylesMobile.imageAndButtonContainer}}>
     <div style={{ ...styles.myImage,...mediaQuerystylesMobile.Image}}>
-        <img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://images.pexels.com/photos/1179863/pexels-photo-1179863.jpeg?auto=compress&cs=tinysrgb&w=600" alt="2"/>
+        <img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://media.istockphoto.com/id/498832383/photo/small-herb-garden.jpg?b=1&s=612x612&w=0&k=20&c=xVvXOshDRXhvaagMgENT4nsyMcgBHvfxNIftIjtFVQM=" alt="2"/>
         
          {/* <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> view post</button> */}
          {/* <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> <a href={/Nissi}> Home</a></button> */}
          <button style={{ ...styles.myButton, ...mediaQuerystylesMobile.myButton }}>
-  <a href="/Nissi">Home</a>
+  <a href="/Nissi">View Post</a>
 </button>
      </div>
      </div>
@@ -307,7 +310,7 @@ quo quia? Consectetur, obcaecati!
 </section>
 </div>
 <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched}}>your home grown flowers</h2>
+<h2 style={{...styles.subconched}}>Favorites</h2>
 <div style={{...styles.subContainerDiv}}>
 <div style={{...styles.subContainerCard}}>
 <img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/46216/sunflower-flowers-bright-yellow-46216.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
@@ -330,7 +333,7 @@ quo quia? Consectetur, obcaecati!
 
 </div>
 <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2>
+{/* <h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2> */}
 <div style={{...styles.subContainerDiv,...styles.Footer}}>
 <div style={{...styles.subContainerCard}}>
 <img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
@@ -353,9 +356,10 @@ dipisci. Asperiores, id.
 </div>
 <div >
 <footer style={{...styles.Footer}}>
-<p style={{...styles.FooterCopyRight}}>&copy; 2024 Your Company</p>
-<a style={{...styles.FooterA}} href="#" className="icon">Icon 1</a>
-<a style={{...styles.Footer}}href="#" className="icon">Icon 2</a> </footer> </div>
+<p style={{...styles.FooterCopyRight}}>&copy; 2024 Blog Place </p>
+{/* <a style={{...styles.FooterA}} href="#" className="icon">Icon 1</a> */}
+{/* <a style={{...styles.Footer}}href="#" className="icon">Icon 2</a>  */}
+ </footer> </div>
 </div>
 </div>
 </div>

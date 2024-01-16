@@ -1,9 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const LogMarkUp = require('./routes/routes.js');
 const connectDB = require('./mongo/connect.jsx');
+
 
 app.use(morgan ('tiny'));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -20,6 +22,7 @@ const PORT = process.env.PORT || 5555;
 
 app.use('/Nissi', LogMarkUp);
 connectDB();
+
 app.listen(PORT, function(){
     console.log(`Express app is running on port: ${PORT}`)
 })

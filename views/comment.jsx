@@ -8,7 +8,7 @@ const styles = {
 HeroNav: {
 height: '500px',
 width: 'auto',
-backgroundImage: 'url("https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D")',
+backgroundImage: 'url("https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600")',
 backgroundSize: 'cover',
 backgroundRepeat: 'no-repeat',
 },
@@ -136,9 +136,10 @@ subContainerDiv: {
         <header style={{...styles.HeroNav}} className="hero-nav">
         <nav style={styles.HeaderNav}>
         <ul style={{...styles.Navul}}>
-        <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li>
+        {/* <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li> */}
                     <li><a href='/about'>About Us</a></li>
                     <li><a href='/signup'>Sign Up</a></li>
+                    <li><a href='/login'>Login</a></li>
                     <li><a style = {{color:'black'}} href='/comment'>Drop a comment</a></li>
         </ul>
         </nav>
@@ -156,7 +157,7 @@ subContainerDiv: {
         <label htmlFor="email">email:</label>
         <input type="email" name='email' placeholder="enter your name"/>
         <textarea name="opinion" id="" cols="100" rows="10"></textarea>
-        <button type="submit">submit</button>
+       <a href='/contributions'> <button type="submit">submit</button></a>
         </form>
         </div>
              </div>
@@ -165,7 +166,7 @@ subContainerDiv: {
                   
              </div>
              <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched}}>your home grown flowers</h2>
+<h2 style={{...styles.subconched}}>Favorites</h2>
 <div style={{...styles.subContainerDiv}}>
 <div style={{...styles.subContainerCard}}>
 <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
@@ -175,7 +176,7 @@ subContainerDiv: {
          <div style={{...styles.subContainerCard}}>
             <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
             <p style={{...styles.subContainerParagraph}}> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
-            <a href="/">  <button style={{...styles.subContainerButton}}>View </button></a> 
+            <a href="/">  <button style={{...styles.subContainerButton}}>View post</button></a> 
         </div>
              
    
@@ -191,7 +192,7 @@ subContainerDiv: {
 </div>
 
 <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2>
+{/* <h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2> */}
 <div style={{...styles.subContainerDiv,...styles.Footer}}>
     <div style={{...styles.subContainerCard}}>
         <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>

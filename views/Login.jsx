@@ -5,7 +5,7 @@ const styles = {
 HeroNav: {
 height: '500px',
 width: 'auto',
-backgroundImage: 'url("https://images.pexels.com/photos/7949632/pexels-photo-7949632.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")',
+backgroundImage: 'url("https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600")',
 backgroundSize: 'cover',
 backgroundRepeat: 'no-repeat',
 },
@@ -157,10 +157,11 @@ textContent: {
                     <header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
                     <nav style={styles.HeaderNav}>
                     <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
-                    <li><img src="" alt="none" /> dericol flowers</li>
-                    <li>about us</li>
-                    <li>what we stand for</li>
-                    <li>Drop a comment</li>
+                    {/* <li><img src="" alt="none" /> dericol flowers</li> */}
+                    <li><a href='/about'>About Us</a></li>
+                    <li><a href='posts/SignUp'>Sign Up</a></li>
+                    {/* <li><a href='/blogHomePage'>what we stand for</a></li> */}
+                    {/* <li><a href='/comment'>Drop a comment</a></li> */}
                     </ul>
                     </nav>
                     </header>
@@ -183,9 +184,9 @@ textContent: {
 </form> */}
 
 <form style={{...styles.form}} action={`/Nissi/loginForm`} method='post'>
-<label for="email">Email:</label>
+<label htmlFor="email">Email:</label>
 <input type="email" name="email" placeholder="enter your email" required/>
-<label for="password">Password:</label>
+<label htmlFor="password">Password:</label>
 <input type="password" name="password" placeholder="enter your password" required/>
 <button type="submit">submit</button>
 </form>
@@ -197,7 +198,7 @@ textContent: {
           </section>
      </div>
      <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched}}>your home grown flowers</h2>
+<h2 style={{...styles.subconched}}>Favorites</h2>
 <div style={{...styles.subContainerDiv}}>
 <div style={{...styles.subContainerCard}}>
 <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
@@ -220,7 +221,7 @@ dipisci. Asperiores, id.
 </div>
 
 <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2>
+{/* <h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2> */}
 <div style={{...styles.subContainerDiv,...styles.Footer}}>
     <div style={{...styles.subContainerCard}}>
         <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
@@ -246,7 +247,7 @@ dipisci. Asperiores, id.
 </div> 
 </div> <div > <footer style={{...styles.Footer}}>
 <p style={{...styles.FooterCopyRight}}>&copy; 2024 Your Company</p>
-<a style={{...styles.FooterA}} href="#" className="icon">Icon 1</a>
+{/* <a style={{...styles.FooterA}} href="#" className="icon">Icon 1</a> */}
 <a style={{...styles.Footer}}href="#" className="icon">Icon 2</a> </footer> </div>
 </div>
 );

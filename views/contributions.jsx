@@ -5,7 +5,7 @@ export default function update({myComments}) {
         HeroNav: {
           height: '500px',
           width: 'auto',
-          backgroundImage: 'url("https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D")',
+          backgroundImage: 'url("https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600")',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         },
@@ -159,16 +159,18 @@ export default function update({myComments}) {
 return (
 <div>
 
-    <header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
-      <nav style={styles.HeaderNav}>
-        <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
-          <li><img src="" alt="none" /> dericol flowers</li>
-          <li>about us</li>
-          <li>what we stand for</li>
-          <li style={{color:'black'}}>Drop a comment</li>
-        </ul>
-      </nav>
-    </header>
+<header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
+<nav style={styles.HeaderNav}>
+<ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
+{/* <li style={{display:'flex',alignItems:'center', fontSize:'40px'}}><a href= '/Nissi/'style={{textDecoration:'none',color:'white'}}><img style={{height:'50px',width:'30px',border:'2px solid orange',borderRadius:'50px'}}src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO3ThLzvml4Q4N5fSRX335KBwArf7QdhOnkw&usqp=CAU" alt="none" /> dericol flowers </a></li> */}
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/about'>About us</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/Comment'>Comments</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/SignUp'>Sign Up</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/Login'>Log in</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/blogHomePage'>Log Out</a></li>
+</ul>
+</nav>
+</header>
     
   <div style={{...styles.sectionContainer}}>
     <section style={{...styles.section,...mediaQuerystylesMobile.section}} >

@@ -173,9 +173,10 @@ FooterA: {
       <header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
       <nav style={styles.HeaderNav}>
       <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
-      <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li>
+      {/* <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li> */}
                     <li><a style = {{color:'black'}}href='/about'>About Us</a></li>
                     <li><a href='/signup'>Sign Up</a></li>
+                    <li><a href='/login'>Login</a></li>
                     <li><a href='/comment'>Drop a comment</a></li>
       </ul>
       </nav>
@@ -239,7 +240,7 @@ dipisci. Asperiores, id.
 </div>
 </div>
 <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2>
+{/* <h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2> */}
 <div style={{...styles.subContainerDiv,...styles.Footer}}>
 <div style={{...styles.subContainerCard}}>
 <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>

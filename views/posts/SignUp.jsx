@@ -7,7 +7,7 @@ const styles = {
 HeroNav: {
 height: '500px',
 width: 'auto',
-backgroundImage: 'url("https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D")',
+backgroundImage: 'url("https://images.pexels.com/photos/19797338/pexels-photo-19797338/free-photo-of-2024.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")',
 backgroundSize: 'cover',
 backgroundRepeat: 'no-repeat',
 },
@@ -16,13 +16,16 @@ display: 'flex',
 flexDirection: 'row-reverse',
 },
 Navul: {
-height: '30%',
-width: '100%',
-padding: '50px',
-display: 'flex',
-justifyContent: 'space-around',
-listStyle: 'none',
-},
+    height: '30%',
+    width: '100%',
+    padding: '50px',
+    display: 'flex',
+    justifyContent: 'space-around',
+    listStyle: 'none',
+    fontSize:'large',
+    fontFamily:'Garamond',
+    color:'white',
+    },
 sectionContainer: {
 marginTop: '50px',
 },
@@ -108,14 +111,12 @@ Footer: {
 backgroundColor: '#390c0c',
 color: '#fff',
 padding: '20px',
+textAlign: 'center',
 },
 FooterA: {
-color: 'red',
+color: 'white',
 textDecoration: 'none',
-':hover': {
-color: '#fff',
-textDecoration: 'underline',
-},
+
 },
 
 form:{
@@ -156,15 +157,17 @@ position: 'static', // Adjusted position to static
 return (
     <div>
     <header style={{...styles.HeroNav,...mediaQuerystylesMobile.HeroNav}} className="hero-nav">
-    <nav style={styles.HeaderNav}>
-    <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
-    <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li>
-                    <li><a href='/about'>About Us</a></li>
-                    <li><a style = {{color:'black'}}  href='/signup'>Sign Up</a></li>
-                    <li><a href='/comment'>Drop a comment</a></li>
-    </ul>
-    </nav>
-    </header>
+<nav style={styles.HeaderNav}>
+<ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
+{/* <li style={{display:'flex',alignItems:'center', fontSize:'40px'}}><img style={{height:'50px',width:'30px',border:'2px solid orange',borderRadius:'50px'}}src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO3ThLzvml4Q4N5fSRX335KBwArf7QdhOnkw&usqp=CAU" alt="none" /> dericol flowers</li> */}
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/about'>About us</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/Comment'>Comments</a></li>
+{/* <li><a style={{textDecoration:'none',color:'black'}} href='/Nissi/SignUp'>Sign In</a></li> */}
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/Login'>Log in</a></li>
+<li><a style={{textDecoration:'none',color:'white'}} href='/Nissi/Login'>Log Out</a></li>
+</ul>
+</nav>
+</header>
     
     <div style={{...styles.sectionContainer}}>
     <section style={{...styles.section,...mediaQuerystylesMobile.section}} >
@@ -189,12 +192,12 @@ return (
               
          </div>
          <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched}}>your home grown flowers</h2>
+<h2 style={{...styles.subconched}}>Favorites</h2>
 <div style={{...styles.subContainerDiv}}>
 <div style={{...styles.subContainerCard}}>
 <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
 <p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
-<button style={{...styles.subContainerButton}}> View post </button>
+<a href="/Nissi/Login"> <button style={{...styles.subContainerButton}}>View post</button></a>
 </div>
          <div style={{...styles.subContainerCard}}>
             <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
@@ -215,7 +218,7 @@ return (
 </div>
 
 <div style={{...styles.Footer}}>
-<h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2>
+{/* <h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2> */}
 <div style={{...styles.subContainerDiv,...styles.Footer}}>
     <div style={{...styles.subContainerCard}}>
         <img style={{...styles.subContainerImage}} src="https://images.unsplash.com/photo-1599421498111-ad70bebb536f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cm9zZSUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="1"/>
@@ -243,8 +246,7 @@ return (
 </div>
 <div > <footer style={{...styles.Footer}}>
 <p style={{...styles.FooterCopyRight}}>&copy; 2024 Your Company</p>
-<a style={{...styles.FooterA}} href="#" className="icon">Icon 1</a>
-<a style={{...styles.Footer}}href="#" className="icon">Icon 2</a> </footer> </div>
+ </footer> </div>
 </div>
 );
 
