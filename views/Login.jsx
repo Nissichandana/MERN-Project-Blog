@@ -158,8 +158,8 @@ textContent: {
                     <nav style={styles.HeaderNav}>
                     <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
                     {/* <li><img src="" alt="none" /> dericol flowers</li> */}
-                    <li><a href='/about'>About Us</a></li>
-                    <li><a href='posts/SignUp'>Sign Up</a></li>
+                    <li><a href='/Nissi/about'>About Us</a></li>
+                    <li><a href='/Nissi/signup'>Sign Up</a></li>
                     {/* <li><a href='/blogHomePage'>what we stand for</a></li> */}
                     {/* <li><a href='/comment'>Drop a comment</a></li> */}
                     </ul>

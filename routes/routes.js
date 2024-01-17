@@ -1,5 +1,6 @@
 const express = require("express");
 const routes = express.Router();
+const bcrypt= require('bcrypt');
 const SignUp = require("../models/signup.js");
 const Comments = require('../models/comment/comments.js')
 
@@ -39,7 +40,7 @@ routes.get('/Comment', async (req, res) => {
        const val=await newComment.save();
        console.log(val);
        const message="thank you for your contribution"
-       res.render('blogHomePage',{messages:message});
+        res.render('blogHomePage',{messages:message});
     } catch (error) {
       console.log(error);
       res.status(500).send('Internal Server Error');
@@ -48,27 +49,67 @@ routes.get('/Comment', async (req, res) => {
 routes.get("/Login", (req, res) => {
   res.render("Login");
 });
-routes.post('/loginForm', async(req,res)=>{
-    try {
-        const {email, password} = req.body;
-        const loginDetails = await SignUp.find();
-        console.log(loginDetails);
+// routes.post('/loginForm', async(req,res)=>{
+//     try {
+//         const {email, password} = req.body;
+//         const loginDetails = await SignUp.find();
+//         console.log(loginDetails);
 
-        const result = loginDetails.filter((details)=>{
-            return password===details.password
-        })
-        console.log(result)
-        if(result==0||result==[]){
-            const message="You are not a member, signup here!";
-            return res.render('posts/SignUp', {messages:message,color:"red"})
+//         const result = loginDetails.filter((details)=>{
+//             return password===details.password
+//         })
+//         console.log(result)
+//         if(result==0||result==[]){
+//             const message="You are not a member, signup here!";
+//             return res.render('posts/SignUp', {messages:message,color:"red"})
 
-        }
-        res.render('blogHomePage', {messages:"Welcome!"})
-    }catch (error) {
-        console.log(error);
-        res.status(500).send('internal server error')
-    }
-})
+//         }
+//         res.render('blogHomePage', {messages:"Welcome!"})
+//     }catch (error) {
+//         console.log(error);
+//         res.status(500).send('internal server error')
+//     }
+// })
+
+routes.post('/loginForm', async (req, res) => {
+  try {
+  const { email, password } = req.body;
+  
+      // Validate that required fields are present
+      if (!email || !password) {
+          const message = "Please provide both email and password.";
+          return res.status(400).render('posts/SignUp', { messages: message, color: "red" });
+      }
+  
+      // Find the user by email
+      const user = await SignUp.findOne({ email });
+  
+      if (!user) {
+          const message = "You are not a member of this site, sign up here";
+          return res.render('posts/SignUp', { messages: message, color: "red" });
+      }
+  
+      // Compare the provided password with the hashed password using bcrypt
+      bcrypt.compare(password, user.password, (err, passwordMatch) => {
+          if (err) {
+              console.error('Error comparing passwords:', err);
+              return res.status(500).render('posts/SignUp', { messages: "Invalid input" });
+          }
+  
+          if (passwordMatch) {
+              // Passwords match, render the HomeView
+              res.render('blogHomePage', { message: user });
+          } else {
+              // Passwords do not match
+              const message = "Incorrect password. Please try again.";
+              res.render('posts/SignUp', { messages: message, color: "red" });
+          }
+      });
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+  }
+  });
 
 routes.get("/signup", (req, res) => {
   res.render("posts/SignUp");
@@ -94,29 +135,65 @@ routes.get("/signup", (req, res) => {
 //   }
 // });
 
-routes.post('/SignUpClient', async (req, res) => {
-    try {
-    const { name, email, password } = req.body;
+// routes.post('/SignUpClient', async (req, res) => {
+//     try {
+//     const { name, email, password } = req.body;
     
+//         // Validate that required fields are present
+//         if (!name || !email || !password) {
+//             const message = "Please provide all required fields.";
+//             return res.status(400).render('posts/SignUp', { messages: message, color:"red"});
+//         }
+    
+//         const newMember = new SignUp({ name, email, password });
+//         const val= await newMember.save();
+//         console.log(val);
+    
+//         const message = "Registration successful!";
+//         return res.render('posts/SignUp', { messages: message, color:"green"});
+//     } catch (error) {
+//         const message = "Oops! Something went wrong. Please try again.";
+//         console.error(error);
+//         return res.status(500).render('posts/SignUp', { messages: message });
+//     }
+//     });
+
+routes.post('/SignUpClient', async (req, res) => {
+  try {
+  const { name, email, password } = req.body;
+  
         // Validate that required fields are present
         if (!name || !email || !password) {
             const message = "Please provide all required fields.";
-            return res.status(400).render('posts/SignUp', { messages: message, color:"red"});
+            return res.status(400).render('posts/SignUp', { messages: message, color: "red" });
         }
-    
-        const newMember = new SignUp({ name, email, password });
-        const val= await newMember.save();
-        console.log(val);
-    
-        const message = "Registration successful!";
-        return res.render('posts/SignUp', { messages: message, color:"green"});
+  
+        // Hash the password
+        bcrypt.hash(password, 10, async (err, hashedPassword) => {
+            if (err) {
+                console.error('Error generating hash:', err);
+                return res.status(500).render('posts/SignUp', { messages: "Internal Server Error" });
+            }
+  
+            // Save the user with the hashed password
+            try {
+                const newMember = new SignUp({ name, email, password: hashedPassword });
+                const savedMember = await newMember.save();
+                console.log(savedMember);
+  
+                const message = "Registration successful!";
+                return res.render('posts/SignUp', { messages: message, color: "green" });
+            } catch (error) {
+                console.error('Error saving user to the database:', error);
+                return res.status(500).render('posts/SignUp', { messages: "Internal Server Error" });
+            }
+        });
     } catch (error) {
         const message = "Oops! Something went wrong. Please try again.";
         console.error(error);
         return res.status(500).render('posts/SignUp', { messages: message });
     }
-    });
-
+  });
 routes.get("/place1", (req, res) => {
   res.render("places/place1");
 });
@@ -159,12 +236,12 @@ routes.get('/Contributions',async(req, res) => {
     
     })
 
-    routes.get('/edit/:_id', async (req, res) => {
+    routes.get('/edit/:id', async (req, res) => {
       try {
       const myId = req.params.id;
       const myOutput = await Comments.findById(myId);
       if(myOutput==0 || myOutput==[]){ res.render('homePage/sign-up',{messages:"you are not a member of this site, sign in here"})}
-      res.render('places/update', { commentInfo:myOutput });
+      res.render('places/update', { myOutput });
       
       } catch (error) {
         console.log(error);
@@ -174,14 +251,14 @@ routes.get('/Contributions',async(req, res) => {
       
       //update comment to database
 
-      routes.post('/update/:_id', async (req, res) => {
+      routes.post('/update/:id', async (req, res) => {
       try {
       const { name,email,opinion } = req.body;
       
         // Convert "on" to true and an empty string to false
-      
+         const message="Updated comment"
          await Comments.findByIdAndUpdate(req.params.id, { name,email,opinion});
-        
+        res.render('blogHomePage',{messages:message})
         
       } catch (error) {
         console.log(error);

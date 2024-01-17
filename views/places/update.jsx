@@ -173,10 +173,10 @@ subContainerDiv: {
 <div>
 <h2>Your comments are important to us!</h2>
 <h3 style={{ color: messages ? "green" : "red" }}>
-{messages || "Cannot send an empty message"}
+{/* {messages || "Cannot send an empty message"} */}
 </h3>
 <div class="form-container">
-<form style={{...styles.form}} action={`/Nissi/update/${myOutput.myID}`} method='post'>
+<form style={{...styles.form}} action={`/Nissi/update/${myOutput.id}`} method='post'>
 <label htmlfor="name">name:</label>
 <input type="text" name="name" defaultValue={myOutput.name}/>
 <label htmlfor="email">email:</label>

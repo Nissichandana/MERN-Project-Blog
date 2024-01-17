@@ -1,10 +1,11 @@
-require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const LogMarkUp = require('./routes/routes.js');
 const connectDB = require('./mongo/connect.jsx');
+require('dotenv').config();
 
 
 app.use(morgan ('tiny'));

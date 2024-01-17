@@ -263,8 +263,9 @@ dipisci. Asperiores, id.
 </div>
 <div > <footer style={{...styles.Footer}}>
 <p style={{...styles.FooterCopyRight}}>&copy; 2024 Your Company</p>
-<a style={{...styles.FooterA}} href="#" class="icon">Icon 1</a>
-<a style={{...styles.Footer}}href="#" class="icon">Icon 2</a> </footer> </div>
+{/* <a style={{...styles.FooterA}} href="#" class="icon">Icon 1</a>
+<a style={{...styles.Footer}}href="#" class="icon">Icon 2</a> */}
+ </footer> </div>
 </div>
 </div>
 );

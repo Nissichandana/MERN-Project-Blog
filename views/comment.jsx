@@ -137,10 +137,11 @@ subContainerDiv: {
         <nav style={styles.HeaderNav}>
         <ul style={{...styles.Navul}}>
         {/* <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li> */}
-                    <li><a href='/about'>About Us</a></li>
-                    <li><a href='/signup'>Sign Up</a></li>
-                    <li><a href='/login'>Login</a></li>
-                    <li><a style = {{color:'black'}} href='/comment'>Drop a comment</a></li>
+                    <li><a href='/Nissi/about'>About Us</a></li>
+                    <li><a href='/Nissi/signup'>Sign Up</a></li>
+                    <li><a href='/Nissi/login'>Login</a></li>
+                    <li><a style = {{color:'black'}} href='/Nissi/comment'>Drop a comment</a></li>
+                    
         </ul>
         </nav>
         </header>
