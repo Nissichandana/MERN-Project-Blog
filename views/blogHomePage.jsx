@@ -5,7 +5,7 @@ const React =require('react');
 export default function BlogHomePage({messages}) {
 const styles = {
 HeroNav: {
-height: '500px',
+height: '100px',
 width: 'auto',
 backgroundImage: 'url("https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600")',
 backgroundSize: 'cover',
@@ -183,33 +183,7 @@ imageAndButtonContainer: {
 <section style={{...styles.section,...mediaQuerystylesMobile.section}} >
 <div style={{...styles.textContent,...styles.sectionContainerintro}}>
 <h2> Grow your own herb garden</h2>
-<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
+<p> Herbs are easy to grow, even for first-time gardeners, and they give you the biggest return for the smallest investment of time, effort, and cost. They can thrive in your backyard garden or in the smallest of spaces — such as in pots on a windowsill — and are fresher and more potent than anything you’ll find at a grocery store or farmers market.
 
     </p>
 </div>
@@ -220,7 +194,7 @@ quo quia? Consectetur, obcaecati!
          {/* <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> view post</button> */}
          {/* <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> <a href={/Nissi}> Home</a></button> */}
          <button style={{ ...styles.myButton, ...mediaQuerystylesMobile.myButton }}>
-  <a href="/Nissi">View Post</a>
+  <a href="/Nissi/post1">View Post</a>
 </button>
      </div>
      </div>
@@ -229,33 +203,7 @@ quo quia? Consectetur, obcaecati!
 <section style={{...styles.section,...mediaQuerystylesMobile.section}} >
 <div style={{...styles.textContent,...styles.sectionContainerintro}}>
 <h2> Places you want to visit</h2>
-<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi  quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
+<p> With a world full of fascinating travel destinations, choosing the perfect vacation spot can present a challenge. That's why U.S. News used expert opinions, reader votes and current trends – and evaluated sights, cultures, scenic beauty, food options and more – to compile this list of the world's best places to visit. Use these recommendations to craft your travel bucket list, and cast your vote below to help us determine next year's ranking.
 
     </p>
 </div>
@@ -263,7 +211,9 @@ quo quia? Consectetur, obcaecati!
     <div style={{ ...styles.myImage,...mediaQuerystylesMobile.Image}}>
         <img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&w=600" alt="2"/>
         
-         <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> view post</button>
+         <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> 
+         <a href="/Nissi/post2">View Post</a>
+         </button>
      </div>
 </div>
 </section>
@@ -271,40 +221,20 @@ quo quia? Consectetur, obcaecati!
 <section style={{...styles.section,...mediaQuerystylesMobile.section}} >
 <div style={{...styles.textContent,...styles.sectionContainerintro}}>
 <h2> Have you tried these recipies?</h2>
-<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates  esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-tempora, assumenda dolorum explicabo totam optio asperiores dolorem voluptates
-esse ducimus quos possimus qui ullam, voluptatum eligendi
-quo quia? Consectetur, obcaecati!
+<p> Spaghetti Carbonara: A classic Italian pasta dish made with spaghetti, eggs, cheese (such as Pecorino Romano or Parmesan), pancetta or bacon, and black pepper.
+
+Chicken Tikka Masala: A flavorful Indian dish consisting of marinated and grilled chicken pieces simmered in a creamy tomato-based sauce with spices like garam masala, turmeric, and cumin.
+
+Chocolate Chip Cookies: A beloved dessert worldwide, chocolate chip cookies are made with ingredients like flour, butter, sugar, eggs, vanilla extract, and of course, chocolate chips.
 
     </p>
 </div> 
 <div style={{...styles.imageAndButtonContainer,...mediaQuerystylesMobile.imageAndButtonContainer}}>
 <div style={{ ...styles.myImage,...mediaQuerystylesMobile.Image}}>
 <img style={{...styles.Image ,...mediaQuerystylesMobile.Image}} src="https://media.istockphoto.com/id/628097352/photo/fresh-vegetables.jpg?b=1&s=612x612&w=0&k=20&c=AKU-JuegVpLJuK5KTHkuI41op3bO-Q1cRtw2I3D0wjA=" alt="2"/>
-         <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> view post</button>
+         <button style={{...styles.myButton,...mediaQuerystylesMobile.myButton}}> 
+         <a href="/Nissi/post3">View Post</a>
+         </button>
      </div>
 </div>
 </section>
@@ -313,7 +243,7 @@ quo quia? Consectetur, obcaecati!
 <h2 style={{...styles.subconched}}>Favorites</h2>
 <div style={{...styles.subContainerDiv}}>
 <div style={{...styles.subContainerCard}}>
-<img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/46216/sunflower-flowers-bright-yellow-46216.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
+{/* <img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/46216/sunflower-flowers-bright-yellow-46216.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
 <p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
 <button style={{...styles.subContainerButton}}> View post </button>
 </div>
@@ -327,7 +257,7 @@ quo quia? Consectetur, obcaecati!
     <p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis a
         dipisci. Asperiores, id.
     </p>
-    <button style={{...styles.subContainerButton}}> View post </button>
+    <button style={{...styles.subContainerButton}}> View post </button> */}
 </div>
 </div>
 
@@ -336,8 +266,8 @@ quo quia? Consectetur, obcaecati!
 {/* <h2 style={{...styles.subconched,...styles.Footer}}>your home grown flowers</h2> */}
 <div style={{...styles.subContainerDiv,...styles.Footer}}>
 <div style={{...styles.subContainerCard}}>
-<img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/>
-<p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
+{/* <img style={{...styles.subContainerImage}} src="https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1"/> */}
+{/* <p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis adipisci. Asperiores, id.</p>
 <button style={{...styles.subContainerButton}}> View post </button>
 </div>
 <div style={{...styles.subContainerCard}}>
@@ -350,7 +280,7 @@ quo quia? Consectetur, obcaecati!
 <p style={{...styles.subContainerParagraph}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore placeat nobis ea maiores repellat quos aperiam quo dignissimos veniam vero iste debitis magni fuga, expedita obcaecati corporis a
 dipisci. Asperiores, id.
 </p>
-<button style={{...styles.subContainerButton}}> View post </button>
+<button style={{...styles.subContainerButton}}> View post </button> */}
 </div>
 </div>
 </div>

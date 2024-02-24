@@ -5,9 +5,9 @@ const React =require('react');
 export default function aboutUs() {
 const styles = {
 HeroNav: {
-height: '500px',
+height: '200px',
 width: 'auto',
-backgroundImage: 'url("https://images.pexels.com/photos/19709063/pexels-photo-19709063/free-photo-of-closeup-of-a-lotus-bud.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")',
+backgroundImage: 'url("https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600")',
 backgroundSize: 'cover',
 backgroundRepeat: 'no-repeat',
 },
@@ -32,7 +32,7 @@ marginTop: '50px',
 section: {
 marginTop: '1px',
 height: 'auto',
-border: '2px solid red',
+border: 'white',
 display: 'flex',
 flexDirection:'column',
 justifyContent: 'space-between',
@@ -121,8 +121,8 @@ backgroundColor: '#390c0c',
 padding: '20px',
 },
 Footer: {
-backgroundColor: '#390c0c',
-color: '#fff',
+backgroundColor: 'green',
+color: 'black',
 padding: '20px',
 },
 
@@ -175,9 +175,9 @@ FooterA: {
       <ul style={{...styles.Navul,...mediaQuerystylesMobile.Navul}}>
       {/* <li><a href='/'><img src="" alt="none" /> dericol flowers</a></li> */}
                     <li><a style = {{color:'black'}}href='/about'>About Us</a></li>
-                    <li><a href='/signup'>Sign Up</a></li>
-                    <li><a href='/login'>Login</a></li>
-                    <li><a href='/comment'>Drop a comment</a></li>
+                    <li><a href='/Nissi/SignUp'>Sign Up</a></li>
+                    <li><a href='/Nissi/Login'>Login</a></li>
+                    <li><a href='/Nissi'>Home</a></li>
       </ul>
       </nav>
       </header>
